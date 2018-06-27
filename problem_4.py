@@ -10,7 +10,26 @@ For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should
 give 3.
 
 You can modify the input array in-place.
+
+-----------
+
+Some other thoughts:
+
+A naive method to solve this problem is to search all positive integers, starting
+from 1 in the given array. We may have to search at most n+1 numbers in the given
+array. So this solution takes O(n^2) in worst case.
+
+We can use sorting to solve it in lesser time complexity. We can sort the array
+in O(nLogn) time. Once the array is sorted, then all we need to do is a linear
+scan of the array. So this approach takes O(nLogn + n) time which is O(nLogn).
+
+We can also use hashing. We can build a hash table of all positive elements in
+the given array. Once the hash table is built. We can look in the hash table for
+all positive integers, starting from 1. As soon as we find a number which is not
+there in hash table, we return it. This approach may take O(n) time on average,
+but it requires O(n) extra space.
 '''
+
 def solution(alist):
     '''
     Use the index of the list to denote whether we have seen this number.
