@@ -9,7 +9,7 @@ For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 Bonus: Can you do this in one pass?
 '''
 
-from sets import Set
+# from sets import Set      # deprecated, now use 'set' directly
 
 def solution(list_nums, target):
     '''
@@ -24,7 +24,7 @@ def solution(list_nums, target):
     returns:
         bool: whether there is a pair of numbers add up to target
     '''
-    num_seen_set = Set()
+    num_seen_set = set()
     for num in list_nums:
         if target - num in num_seen_set:
             return True

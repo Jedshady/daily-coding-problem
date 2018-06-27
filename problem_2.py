@@ -28,7 +28,7 @@ def solution(list_nums):
     mul_left = dict()
     mul_right = dict()
 
-    new_list = [0] * len(list_nums)
+    new_list = [None] * len(list_nums)  # best practice: use None to initiate
 
     mul_left[-1] = 1
     for i in range(len(list_nums) - 1):
