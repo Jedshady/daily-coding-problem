@@ -44,8 +44,8 @@ def solution(alist):
         int: the smallest positive integer missing in the given list
     '''
     pos_list = remove_negative(alist)
-    smart_list = modify_index(pos_list)
-    smallest_pos = find_smallest_pos(smart_list)
+    modify_index(pos_list)
+    smallest_pos = find_smallest_pos(pos_list)
     return smallest_pos
 
 
@@ -55,6 +55,15 @@ def remove_negative(alist):
         alist(list): a list of numbers may includes duplicates and negative
     Returns:
         list: a list of numbers may includes only duplicates, no negative and 0
+    '''
+
+    '''
+    Note:
+        When reading, 'alist' is a reference to the original 'list', and 'list[:]'
+        shallow-copies the list.
+
+        When assigning, 'alist' (re)binds the name and 'alist[:]' slice-assigns,
+        replacing what was previously in the list.
     '''
     # filter seems not an in-place modification
     # new_list = list(filter(lambda x: x > 0, alist))
@@ -78,27 +87,27 @@ def modify_index(pos_list):
     for num in pos_list:
         if abs(num) - 1 < len(pos_list) and pos_list[abs(num) - 1] > 0:
             pos_list[abs(num) - 1] = - pos_list[abs(num) - 1]
-    return pos_list
 
 
-def find_smallest_pos(smart_list):
+def find_smallest_pos(pos_list):
+    # return pos_list
     '''
     Args:
-        smart_list(list)
+        pos_list(list)
     Returns:
         int
     '''
-    for idx, num in enumerate(smart_list):
+    for idx, num in enumerate(pos_list):
         if num > 0:
             return idx + 1
-    return len(smart_list) + 1
+    return len(pos_list) + 1
 
 
 def main():
     # test_list = [3, 4, -1, 1]
     # test_list = [1, 2, 0]
-    # test_list = [2, 4, -8, 10, 15, 0, 0 , -1]
-    test_list = [0, 0, 0]
+    test_list = [2, 4, -8, 10, 15, 0, 0 , -1, 1]
+    # test_list = [0, 0, 0]
     print solution(test_list)
 
 
