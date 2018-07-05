@@ -31,13 +31,53 @@ def add(trie_root, word):
     cur_node.end_of_word = True
 
 
+def search(trie_root, pattern):
+    '''
+    Args:
+        trie_root(Trie_Node): the root of the Trie tree
+        pattern(string): the query string for autocomplete
+    Returns:
+        list: a list of possible results
+    '''
+    cur_node = trie_root
+    res = list()
+    for char in pattern:
+        if char in cur_node.children:   # able to auto-complete
+            cur_node = cur_node.children[char]
+            res.append(char)
+        else:   # no matching
+            return []
+
+    prefix = ''.join(res[:-1])
+    suffix = build_str(cur_node)    # recursively find the suffix
+    return [prefix + item for item in suffix]
+
+
+def build_str(trie_node):
+    '''
+    Args:
+        trie_node(Trie_Node): the node in the Trie that deeper than the pattern
+    Returns:
+        list: a list of sub_string of possible suffix
+    '''
+    if trie_node.end_of_word:
+        return [trie_node.char]
+
+    sub_string = []
+    for k, v in trie_node.children.items():
+        sub_string.extend(build_str(v))
+
+    sub_string = [trie_node.char + item for item in sub_string]
+    return sub_string
+
+
 def main():
     root = Trie_Node('*')
-    str_list = ['dog', 'deer', 'deal']
+    str_list = ['dog', 'deer', 'deel', 'deat', 'dealete', 'deassase']
     for word in str_list:
         add(root, word)
-    print root.children['d'].children['e'].char
-    print root.children['d'].children['e'].children
+    print search(root, 'de')
+
 
 if __name__ == '__main__':
     main()
