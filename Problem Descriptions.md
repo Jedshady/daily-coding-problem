@@ -1,6 +1,13 @@
 # Problem Descripition
 
 -----
+##Table of Content
+
+[Problem 1-30](## Problem 1-30)
+
+## Problem 1-30
+
+----
 
 ### Problem 12
 This problem was asked by Amazon.
