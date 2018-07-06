@@ -1,11 +1,11 @@
 # Problem Descripition
 
 -----
-##Table of Content
+## Table of Content
 
-[Problem 1-30](## Problem 1-30)
+[Problem 1-30](#1-30)
 
-## Problem 1-30
+## <a id='1-30'></a> Problem 1-30
 
 ----
 
