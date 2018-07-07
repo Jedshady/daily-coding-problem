@@ -11,7 +11,7 @@ characters is "bcb".
 def solution(string, k):
     '''
     Keep a window and add elements to the window till it contains less or equal
-    k. If unique elements exceeds than required in window, start removing the 
+    k. If unique elements exceeds than required in window, start removing the
     elements from left side.
 
     Args:
@@ -45,10 +45,35 @@ def solution(string, k):
             distinct_cnt = fast - slow
     return distinct_cnt
 
+
+def solution2(s, k):
+    '''
+    Thanks to Ricardo:
+    https://github.com/r1cc4rdo/daily_coding_problem/blob/master/daily_coding_problem_11_15.py
+    providing this wonderful concise solution.
+    '''
+    assert(len(s) >= k)
+    
+    start_index, end_index, max_length = 0, k, k
+    while end_index < len(s):
+
+        end_index += 1
+        while True:
+
+            distinct_characters = len(set(s[start_index:end_index]))
+            if distinct_characters <= k:
+                break
+
+            start_index += 1
+
+        max_length = max(max_length, end_index - start_index)
+
+    return max_length
+
 def main():
     s = 'aabbcc'
     k = 3
-    print solution(s, k)
+    print solution2(s, k)
 
 if __name__ == '__main__':
     main()
