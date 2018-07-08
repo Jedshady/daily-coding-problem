@@ -25,7 +25,7 @@ def est_pi(num):
         prev_pi = pi_approx
         pi_approx = 4 * cnt / float(total)
         if abs(prev_pi - pi_approx) < 1e-8:
-            return i, pi_approx
+            return pi_approx
 
 
 def main():
