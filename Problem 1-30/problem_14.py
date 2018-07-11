@@ -8,28 +8,33 @@ Monte Carlo method.
 Hint: The basic equation of a circle is x2 + y2 = r2.
 '''
 import random
+import math
+
+random.seed(0xBADC0FFE)
 
 def est_pi(num):
-    point = list()
     cnt = 0
     total = 0
     prev_pi, pi_approx = 0, 3
 
     while True:
+        point = list()
         for i in range(num):
-            random.seed(total) # set seed
             point.append((random.random(), random.random()))
             if point[i][0] ** 2 + point[i][1] ** 2 <= 1:
                 cnt += 1
             total += 1
         prev_pi = pi_approx
         pi_approx = 4 * cnt / float(total)
-        if abs(prev_pi - pi_approx) < 1e-8:
+        print 'prev_pi = {}, pi_approx = {}'.format(prev_pi, pi_approx)
+        if abs(prev_pi - pi_approx) < 1e-9:    # assume we don't know math.pi
             return pi_approx
+        # if abs(math.pi - pi_approx) < 1e-4:   # assume math.pi is known
+        #     return pi_approx
 
 
 def main():
-    print est_pi(10000)
+    print est_pi(1000)
 
 
 if __name__ == '__main__':
