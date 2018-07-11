@@ -13,16 +13,17 @@ This problem was asked by Google.
 
 Suppose we represent our file system by a string in the following manner:
 
-The string ```"dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext"``` represents:
+The string `"dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext"` represents:
 ```
 dir
     subdir1
     subdir2
         file.ext
 ```
-The directory ```dir``` contains an empty sub-directory ```subdir1``` and a sub-directory ```subdir2``` containing a file ```file.ext```.
+The directory `dir` contains an empty sub-directory `subdir1` and a sub-directory `subdir2` containing a file `file.ext`.
 
-The string ```"dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"``` represents:
+The string `"dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"` represents:
+
 ```
 dir
     subdir1
@@ -32,9 +33,10 @@ dir
         subsubdir2
             file2.ext
 ```
-The directory ```dir``` contains two sub-directories ```subdir1``` and ```subdir2```. ```subdir1``` contains a file ```file1.ext``` and an empty second-level sub-directory ```subsubdir1```. ```subdir2``` contains a second-level sub-directory ```subsubdir2``` containing a file ```file2.ext```.
 
-We are interested in finding the longest (number of characters) absolute path to a file within our file system. For example, in the second example above, the longest absolute path is ```"dir/subdir2/subsubdir2/file2.ext"```, and its length is 32 (not including the double quotes).
+The directory `dir` contains two sub-directories `subdir1` and `subdir2`. `subdir1` contains a file `file1.ext` and an empty second-level sub-directory `subsubdir1`. `subdir2` contains a second-level sub-directory `subsubdir2` containing a file `file2.ext`.
+
+We are interested in finding the longest (number of characters) absolute path to a file within our file system. For example, in the second example above, the longest absolute path is `"dir/subdir2/subsubdir2/file2.ext"`, and its length is 32 (not including the double quotes).
 
 Given a string representing the file system in the above format, return the length of the longest absolute path to a file in the abstracted file system. If there is no file in the system, return 0.
 
@@ -62,16 +64,16 @@ Given a stream of elements too large to store in memory, pick a random element f
 ### Problem 14
 This problem was asked by Google.
 
-The area of a circle is defined as ```πr^2```. Estimate π to 3 decimal places using a Monte Carlo method.
+The area of a circle is defined as `πr^2`. Estimate π to 3 decimal places using a Monte Carlo method.
 
-Hint: The basic equation of a circle is ```x2 + y2 = r2```.
+Hint: The basic equation of a circle is `x2 + y2 = r2`.
 
 ### Problem 13
 This problem was asked by Amazon.
 
 Given an integer k and a string s, find the length of the longest substring that contains at most k distinct characters.
 
-For example, given s = ```"abcba"``` and k = 2, the longest substring with k distinct characters is ```"bcb"```.
+For example, given s = `"abcba"` and k = 2, the longest substring with k distinct characters is `"bcb"`.
 
 ### Problem 12
 This problem was asked by Amazon.
@@ -86,14 +88,14 @@ For example, if N is 4, then there are 5 unique ways:
 1, 1, 2
 2, 2
 ```
-What if, instead of being able to climb 1 or 2 steps at a time, you could climb any number from a set of positive integers X? For example, if ```X = {1, 3, 5}```, you could climb 1, 3, or 5 steps at a time.
+What if, instead of being able to climb 1 or 2 steps at a time, you could climb any number from a set of positive integers X? For example, if `X = {1, 3, 5}`, you could climb 1, 3, or 5 steps at a time.
 
 ### Problem 11
 This problem was asked by Twitter.
 
 Implement an autocomplete system. That is, given a query string s and a set of all possible query strings, return all strings in the set that have s as a prefix.
 
-For example, given the query string de and the set of strings ```[dog, deer, deal]```, return ```[deer, deal]```.
+For example, given the query string de and the set of strings `[dog, deer, deal]`, return `[deer, deal]`.
 
 Hint: Try preprocessing the dictionary into a more efficient data structure to speed up queries.
 
