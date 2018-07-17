@@ -23,6 +23,8 @@ because there is a wall everywhere else on the second row.
 '''
 '''
 A* Algorithm:
+https://www.redblobgames.com/pathfinding/a-star/implementation.html
+
 def heuristic(a, b):
     (x1, y1) = a
     (x2, y2) = b
@@ -56,7 +58,7 @@ def a_star_search(graph, start, goal):
 Refer to:
 https://github.com/r1cc4rdo/daily_coding_problem/blob/master/daily_coding_problem_21_25.py
 '''
-def find_shortest(map, start, end):
+def find_shortest_path(map, start, end):
     coords = [(index_r, index_c) for index_r, row in enumerate(map)
               for index_c, element in enumerate(row) if not element]
 
@@ -85,7 +87,7 @@ def main():
             [True, True, False, True],
             [False, False, False, False],
             [False, False, False, False]]
-    print find_shortest(map, (3, 0), (0, 0))
+    print find_shortest_path(map, (3, 0), (0, 0))
 
 
 if __name__ == '__main__':
