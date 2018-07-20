@@ -11,7 +11,7 @@
 ### Problem 26
 This problem was asked by Google.
 
-Given a singly linked list and an integer `k`, remove the `kth` last element from the list. `k` is guaranteed to be smaller than the length of the list.
+Given a singly linked list and an integer `k`, remove the <code>k<sup>th</sup></code> last element from the list. `k` is guaranteed to be smaller than the length of the list.
 
 The list is very long, so making more than one pass is prohibitively expensive.
 
@@ -94,7 +94,7 @@ This problem was asked by Facebook.
 
 A builder is looking to build a row of `N` houses that can be of `K` different colors. He has a goal of minimizing cost while ensuring that no two neighboring houses are of the same color.
 
-Given an `N by K` matrix where the `nth` row and `kth` column represents the cost to build the `nth` house with `kth` color, return the minimum cost which achieves this goal.
+Given an `N by K` matrix where the n<sup>th</sup> row and k<sup>th</sup> column represents the cost to build the n<sup>th</sup> house with k<sup>th</sup> color, return the minimum cost which achieves this goal.
 
 
 ### Problem 18
@@ -169,9 +169,9 @@ Given a stream of elements too large to store in memory, pick a random element f
 ### Problem 14
 This problem was asked by Google.
 
-The area of a circle is defined as `πr^2`. Estimate π to 3 decimal places using a Monte Carlo method.
+The area of a circle is defined as <code>πr<sup>2</sup></code>. Estimate π to 3 decimal places using a Monte Carlo method.
 
-Hint: The basic equation of a circle is `x2 + y2 = r2`.
+Hint: The basic equation of a circle is <code>x<sup>2</sup> + y<sup>2</sup> = r<sup>2</sup></code>.
 
 ### Problem 13
 This problem was asked by Amazon.
@@ -261,7 +261,7 @@ If using a language that has no pointers (such as Python), you can assume you ha
 ### Problem 5
 This problem was asked by Jane Street.
 
-cons(a, b) constructs a pair, and car(pair) and cdr(pair) returns the first and last element of that pair. For example, car(cons(3, 4)) returns 3, and cdr(cons(3, 4)) returns 4.
+`cons(a, b)` constructs a pair, and `car(pair)` and `cdr(pair)` returns the first and last element of that pair. For example, `car(cons(3, 4))` returns 3, and `cdr(cons(3, 4))` returns 4.
 
 Given this implementation of cons:
 ```
@@ -277,7 +277,7 @@ This problem was asked by Stripe.
 
 Given an array of integers, find the first missing positive integer in linear time and constant space. In other words, find the lowest positive integer that does not exist in the array. The array can contain duplicates and negative numbers as well.
 
-For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should give 3.
+For example, the input `[3, 4, -1, 1]` should give 2. The input `[1, 2, 0]` should give 3.
 
 You can modify the input array in-place.
 
@@ -292,7 +292,7 @@ Some other thoughts:
 ### Problem 3
 This problem was asked by Google.
 
-Given the root to a binary tree, implement serialize(root), which serializes the tree into a string, and deserialize(s), which deserializes the string back into the tree.
+Given the root to a binary tree, implement `serialize(root)`, which serializes the tree into a string, and `deserialize(s)`, which deserializes the string back into the tree.
 
 For example, given the following Node class
 ```
@@ -311,17 +311,17 @@ assert deserialize(serialize(node)).left.left.val == 'left.left'
 ### Problem 2
 This problem was asked by Uber.
 
-Given an array of integers, return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i.
+Given an array of integers, return a new array such that each element at index `i` of the new array is the product of all the numbers in the original array except the one at `i`.
 
-For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120, 60, 40, 30, 24]. If our input was [3, 2, 1], the expected output would be [2, 3, 6].
+For example, if our input was `[1, 2, 3, 4, 5]`, the expected output would be `[120, 60, 40, 30, 24]`. If our input was `[3, 2, 1]`, the expected output would be `[2, 3, 6]`.
 
 Follow-up: what if you can't use division?
 
 ### Problem 1
 This problem was recently asked by Google.
 
-Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
+Given a list of numbers and a number `k`, return whether any two numbers from the list add up to `k`.
 
-For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
+For example, given `[10, 15, 3, 7]` and `k` of 17, return true since 10 + 7 is 17.
 
 Bonus: Can you do this in one pass?
