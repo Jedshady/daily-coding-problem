@@ -1,9 +1,22 @@
-# Problem Descripition
+# Problem Description
 
 -----
 ## Table of Content
 
-[Problem 1-30](#1-30)
+[Problem 1-30](#1-30)  
+[Problem 31-60](#31-60)
+
+## <a id='31-60'></a> Problem 31-60
+
+---
+### Problem 31
+This problem was asked by Google.
+
+The edit distance between two strings refers to the minimum number of character insertions, deletions, and substitutions required to change one string to the other. For example, the edit distance between `“kitten”` and `“sitting”` is three: substitute the `“k”` for `“s”`, substitute the `“e”` for `“i”`, and append a `“g”`.
+
+Given two strings, compute the edit distance between them.
+
+----
 
 ## <a id='1-30'></a> Problem 1-30
 
