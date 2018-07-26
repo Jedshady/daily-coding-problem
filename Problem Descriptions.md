@@ -9,6 +9,13 @@
 ## <a id='31-60'></a> Problem 31-60
 
 ---
+### Problem 32
+This problem was asked by Jane Street.
+
+Suppose you are given a table of currency exchange rates, represented as a 2D array. Determine whether there is a possible arbitrage: that is, whether there is some sequence of trades you can make, starting with some amount A of any currency, so that you can end up with some amount greater than A of that currency.
+
+There are no transaction costs and you can trade fractional quantities.
+
 ### Problem 31
 This problem was asked by Google.
 
