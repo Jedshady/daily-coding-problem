@@ -9,6 +9,11 @@
 ## <a id='31-60'></a> Problem 31-60
 
 ---
+### Problem 36
+This problem was asked by Dropbox.
+
+Given the root to a binary search tree, find the second largest node in the tree.
+
 ### Problem 35
 This problem was asked by Google.
 
